@@ -84,7 +84,7 @@ def search(id):
 
 @app.errorhandler(400)
 def bad_request(error):
-    
+    # Handles error 404
     abort(404)
 
 
@@ -112,8 +112,6 @@ def create():
 		return '{"id":"' + drive_query.get('id') + '", "titulo":"' + drive_query.get('name') + '", "descripcion":"' + file_content + '"}'
 		# Returns a json with the file properties
 
-
-#curl -i -X POST -H Content-Type:application/json -d "{\"name\":\"nombre\", \"description\":\"descripcion\"}" http://localhost:5000/create
 
 main() # App starts here
 	
